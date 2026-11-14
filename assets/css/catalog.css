@@ -1,0 +1,366 @@
+/* Main layout */
+.catalog-main {
+    margin-top: 80px;
+}
+
+/* Заголовок каталога */
+.catalog-title {
+    text-align: center;
+    padding: 40px 20px 20px;
+    background-color: #FCF1E9;
+}
+.catalog-title h1 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 36px;
+    color: #9D0A0F;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.catalog-container {
+    max-width: 1100px; /* ~4 карточки по 280px */
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #FCF1E9;
+
+    /* Сдвигаем чуть левее центра */
+    transform: translateX(-10%);
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+    justify-items: center;
+    align-items: start;
+    margin-bottom: 40px;
+}
+
+.category-title {
+    font-size: 24px;
+    background-color: #9D0A0F;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    width: fit-content;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    margin-left: 0;
+}
+
+.product-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 15px;
+    transition: box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 280px;
+}
+
+.product-card:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Фиксированное место под изображение */
+.product-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain; /* Чтобы не растягивалось */
+    margin-bottom: 15px;
+    display: block;
+}
+
+.product-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрируем всё содержимое */
+    gap: 8px; /* Расстояние между элементами */
+    text-align: center; /* Для случаев, где flex не работает */
+}
+
+.product-info h4 {
+    font-size: 18px;
+    color: #9D0A0F;
+    margin: 0;
+    font-weight: bold;
+}
+
+.product-info p {
+    font-size: 12px;
+    margin: 0;
+    color: #333;
+    font-style: italic;
+    text-align: center;
+}
+
+.price {
+    font-weight: bold;
+    color: #9D0A0F;
+    font-size: 18px;
+    margin: 0;
+    text-align: center;
+    font-style: normal; /* Отменяет возможный наследуемый курсив */
+}
+
+.btn {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: 'Manrope', sans-serif;
+    text-align: center;
+}
+
+.add-to-cart {
+    background-color: #9D0A0F;
+    color: white;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.add-to-cart:hover {
+    background-color: #FCF1E9;
+    color: #9D0A0F;
+}
+
+.price-and-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px; /* Расстояние между ценой и кнопкой */
+    width: 100%;
+    margin-top: 10px;
+}
+
+.product-details {
+    font-size: 16px;
+    color: #9D0A0F;
+    text-decoration: underline;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-align: center;
+    display: inline-block;
+}
+
+.product-details:hover {
+    color: white;
+    background-color: #9D0A0F;
+    padding: 2px 6px;
+    border-radius: 4px;
+}
+
+/* Единая навигационная панель справа */
+.catalog-nav {
+    position: fixed;
+    top: 50%;
+    right: 60px;
+    transform: translateY(-50%);
+    z-index: 1000;
+    display: flex;
+    align-items: center; /* 🔥 Теперь контейнеры по вертикали по центру */
+    gap: 10px;
+}
+
+/* Блок с текстом категорий */
+.category-list {
+    list-style: none;
+    margin: 0;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: center; /* 🔥 Центрируем по вертикали */
+    gap: 6px;
+}
+
+.category-list li {
+    font-size: 13px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #9D0A0F;
+    cursor: pointer;
+    padding: 4px 8px;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    text-align: right;
+    margin: 0;
+    height: 24px; /* Точная высота строки = высоте точки */
+    display: flex; /* 🔥 Добавляем flexbox */
+    align-items: center; /* 🔥 Вертикальное центрирование */
+}
+
+/* Контейнер с точками */
+.dot-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center; /* 🔥 Центрируем точки по вертикали */
+    gap: 6px;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 6px;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 4px 4px;
+}
+
+/* Точка */
+.dot-container a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    text-decoration: none;
+    color: transparent;
+}
+
+.category-dot {
+    width: 10px;
+    height: 10px;
+    background-color: #9D0A0F;
+    border-radius: 50%;
+    transition: background-color 0.3s ease;
+}
+
+/* Активная/наведённая точка */
+.category-list li:hover,
+.category-list li.hovered {
+    background-color: #9D0A0F;
+    color: white;
+}
+
+.category-list li:hover .category-name,
+.category-list li.hovered .category-name {
+    color: white;
+}
+
+.dot-container a:hover,
+.dot-container a.hovered {
+    background-color: #9D0A0F; /* НЕ ЗАДАН */
+}
+
+.dot-container a:hover .category-dot,
+.dot-container a.hovered .category-dot {
+    background-color: white;
+}
+
+/* Активная категория */
+.category-list li.active,
+.dot-container a.active {
+    background-color: #9D0A0F;
+    color: white;
+    transform: scale(1.1); /* Увеличиваем на 10% */
+}
+
+.category-list li.active .category-name {
+    color: white;
+}
+
+.category-dot.active {
+    background-color: white;
+}
+
+.category-name {
+    display: inline-block; /* Чтобы translate работал */
+    transition: transform 0.3s ease;
+}
+
+.category-name.shifted {
+    transform: translateX(-10%);
+}
+
+/* === Модальное окно === */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.modal-content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    width: 90%;
+    position: relative;
+    text-align: center;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.modal-image {
+    max-width: 100%;
+    max-height: 350px;
+    width: auto;
+    height: auto;
+    object-fit: contain; /* Изображение помещается полностью без обрезки */
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #9D0A0F;
+}
+
+.modal-body #modalDescription {
+    font-size: 18px; /* Увеличенный шрифт для описания */
+    font-weight: normal;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.modal-body #modalInfo1,
+.modal-body #modalInfo2 {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+}
+
+.modal-body h2 {
+    font-size: 20px;
+    color: #9D0A0F;
+    margin: 0 0 15px;
+}
+
+.modal-body p {
+    margin: 8px 0;
+    font-size: 14px;
+    color: #333;
+    text-align: left;
+    max-width: 100%;
+    word-wrap: break-word;
+}
+
+.modal-body .price {
+    font-size: 18px;
+    margin: 20px 0;
+    color: #9D0A0F; /* Цвет как на карточке */
+    font-weight: bold;
+}

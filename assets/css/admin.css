@@ -1,0 +1,607 @@
+/* Base Admin Styles */
+.admin-container {
+    padding: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Заголовки */
+h2, h3 {
+    color: #9D0A0F;
+    margin-bottom: 20px;
+}
+
+.section-title {
+    font-size: 24px;
+    color: #9D0A0F;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Кнопка "Назад" */
+.back-button {
+    display: inline-block;
+    margin-bottom: 30px;
+    padding: 12px 24px;
+    background-color: #754E4B;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #9D0A0F;
+}
+
+/* Главное меню админки — карточки */
+.admin-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.menu-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 30px;
+    text-align: center;
+    font-size: 16px;
+    color: #9D0A0F;
+    text-decoration: none;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.menu-card span {
+    font-weight: bold;
+    display: block;
+}
+
+.menu-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-5px);
+}
+
+/* Формы */
+form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
+}
+
+form label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #333;
+}
+
+form input[type="text"],
+form input[type="number"],
+form select,
+form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+form button {
+    background-color: #9D0A0F;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #754E4B;
+}
+
+/* Таблица товаров */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+
+table th,
+table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+table th {
+    background-color: #f8f8f8;
+    color: #333;
+    font-weight: bold;
+}
+
+table img {
+    max-width: 100px;
+    height: auto;
+    border-radius: 4px;
+}
+
+table a {
+    color: #9D0A0F;
+    text-decoration: none;
+    margin-right: 10px;
+}
+
+table a:hover {
+    text-decoration: underline;
+}
+
+/* Действия с товарами */
+td small {
+    color: #888;
+    font-size: 12px;
+}
+
+/* Редактирование товара */
+.edit-form {
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Мобильная адаптация */
+@media (max-width: 768px) {
+    form input[type="text"],
+    form input[type="number"],
+    form select,
+    form textarea {
+        font-size: 14px;
+    }
+
+    table th,
+    table td {
+        font-size: 14px;
+        padding: 10px;
+    }
+}
+
+.messages-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
+}
+
+.messages-table th,
+.messages-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.messages-table thead {
+    background-color: #9D0A0F;
+    color: white;
+}
+
+.messages-table tr.unread {
+    background-color: #FFF3CD; /* Лёгкое выделение непрочитанных */
+}
+
+.mark-read-btn,
+.delete-btn {
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: white;
+    background-color: #754E4B;
+}
+
+.mark-read-btn:hover {
+    background-color: #9D0A0F;
+}
+
+.delete-btn {
+    background-color: #e63946;
+}
+
+.delete-btn:hover {
+    background-color: #c71c28;
+}
+
+.filters {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.filter-form {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    background-color: #f9f9f9;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
+}
+
+.filter-form select,
+.filter-form button {
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.filter-form button {
+    background-color: #9D0A0F;
+    color: white;
+    border: none;
+}
+
+.filter-form button:hover {
+    background-color: #754E4B;
+}
+
+.login-box {
+    max-width: 400px;
+    margin: 60px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: left;
+}
+
+.login-box h2 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #9D0A0F;
+}
+
+.login-box input[type="text"],
+.login-box input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.login-box button {
+    width: 100%;
+    padding: 10px;
+    background-color: #9D0A0F;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.login-box button:hover {
+    background-color: #754E4B;
+}
+
+.login-box .error {
+    color: red;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.form-success {
+    background-color: #d4edda;
+    color: #155724;
+    padding: 15px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.delete-btn {
+    background-color: #e63946;
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.delete-btn:hover {
+    background-color: #c71c28;
+}
+
+.logout-link {
+    position: absolute;
+    top: 120px;
+    right: 30px;
+    background-color: #e63946;
+    color: white;
+    padding: 8px 16px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.3s ease;
+}
+
+.logout-link:hover {
+    background-color: #c71c28;
+}
+
+/* === Стили для кнопок изменения статуса === */
+.status-btn {
+    background-color: transparent; /* Без фона */
+    color: #9D0A0F;
+    border: 2px solid #9D0A0F; /* Обводка */
+    font-size: 14px;
+    padding: 6px 12px;
+    margin: 2px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    width: 100px;
+    text-align: center;
+    border-radius: 4px;
+}
+
+/* Активная кнопка — текущий статус */
+.status-btn.active {
+    background-color: #754E4B;
+    color: white;
+    border-color: #754E4B;
+}
+
+/* При наведении на неактивные кнопки */
+.status-btn:hover {
+    background-color: #fff8f0;
+    border-color: #754E4B;
+}
+
+/* Центрирование всех кнопок внутри контейнера */
+/* === Стили для контейнера действий === */
+.actions-container {
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение строк */
+    gap: 8px; /* Отступ между строками */
+}
+
+/* Строка с кнопками статуса */
+.status-row {
+    display: flex;
+    gap: 8px; /* Отступ между кнопками */
+    justify-content: center; /* Выравнивание по центру */
+}
+
+.messages-table th:nth-child(1),
+.messages-table td:nth-child(1) {
+    min-width: 100px;
+    max-width: 150px;
+}
+
+.messages-table th:nth-child(2),
+.messages-table td:nth-child(2) {
+    min-width: 170px;
+    max-width: 300px;
+}
+
+.messages-table th:nth-child(3),
+.messages-table td:nth-child(3) {
+    min-width: 30px;
+    max-width: 300px;
+}
+
+.messages-table th:nth-child(4),
+.messages-table td:nth-child(4) {
+    min-width: 30px;
+    max-width: 300px;
+}
+
+.messages-table th:nth-child(6),
+.messages-table td:nth-child(6) {
+    width: 180px;
+}
+
+.messages-table th:nth-child(7),
+.messages-table td:nth-child(7) {
+    text-align: center; 
+}
+
+.messages-table th:nth-child(8),
+.messages-table td:nth-child(8) {
+    white-space: nowrap;
+}
+
+/* === Таблица заказов пользователей === */
+.orders-table {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    margin-bottom: 40px;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.orders-table th,
+.orders-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.orders-table thead {
+    background-color: #9D0A0F;
+    color: white;
+}
+
+.orders-table tr.unread {
+    background-color: #FFF3CD; /* Лёгкое выделение непрочитанных заказов */
+}
+
+/* === Настройка ширины столбцов таблицы заказов === */
+
+.orders-table th:nth-child(3),
+.orders-table td:nth-child(3) {
+    min-width: 170px;
+    max-width: 300px;
+}
+
+.orders-table th:nth-child(4),
+.orders-table td:nth-child(4) {
+    min-width: 170px;
+    max-width: 300px;
+}
+
+.orders-table th:nth-child(5),
+.orders-table td:nth-child(5) {
+    min-width: 170px;
+    max-width: 300px;
+    white-space: normal;
+}
+
+.orders-table th:nth-child(6),
+.orders-table td:nth-child(6) {
+    min-width: 250px;
+    max-width: 700px;
+    white-space: normal;
+}
+
+.orders-table th:nth-child(7),
+.orders-table td:nth-child(7) {
+    width: 100px; /* Сумма */
+    text-align: center;
+    white-space: nowrap;
+}
+
+.orders-table th:nth-child(8),
+.orders-table td:nth-child(8) {
+    width: 130px; /* Дата */
+    text-align: center;
+}
+
+/* === Центрирование контейнера таблицы === */
+.table-container {
+    display: flex;
+    justify-content: center; /* Горизонтальное центрирование */
+    align-items: center;      /* Вертикальное центрирование (опционально) */
+    width: 100%;
+    padding: 0 20px;          /* Небольшой отступ по краям */
+    box-sizing: border-box;
+}
+
+/* === Кнопки действий === */
+.status-actions {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+}
+
+.status-button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    background-color: #ddd;
+    color: #333;
+}
+
+.status-actions .status-button.active {
+    background-color: #9D0A0F;
+    color: white;
+}
+
+.delete-button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    background-color: #ff4d4d;
+    color: white;
+}
+
+/* === Фильтр по статусу === */
+.filter-form {
+    display: inline-flex; /* Ограничиваем ширину формы */
+    align-items: center;  /* Выравнивание элементов по центру */
+    gap: 10px;           /* Отступ между элементами */
+    background-color: #f9f9f9;
+    padding: 8px 12px;   /* Внутренние отступы */
+    border-radius: 6px;   /* Скругление углов */
+    border: 1px solid #ddd; /* Граница */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05); /* Легкая тень */
+    margin: 0 auto 20px;  /* Центрирование и отступ снизу */
+}
+
+.filter-form label {
+    font-weight: bold;
+    margin-right: 10px;
+    white-space: nowrap; /* Запрещаем перенос текста */
+}
+
+.filter-form select {
+    padding: 8px;
+    font-size: 14px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: auto; /* Автоматическая ширина */
+}
+
+.filter-form button {
+    background-color: #9D0A0F;
+    color: white;
+    border: none;
+    padding: 8px 12px;
+    font-size: 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    white-space: nowrap; /* Запрещаем перенос текста */
+}
+
+.filter-form button:hover {
+    background-color: #754E4B;
+}
+
+/* === Заголовок "ЗАКАЗЫ ПОЛЬЗОВАТЕЛЕЙ" === */
+h1 {
+    text-align: center; /* Выравнивание текста по центру */
+    color: #9D0A0F;
+    margin-bottom: 20px;
+}
+
+/* === Контейнер для формы фильтра === */
+.filter-container {
+    display: flex;
+    justify-content: center; /* Горизонтальное центрирование */
+    align-items: center;     /* Вертикальное центрирование (опционально) */
+    margin-bottom: 20px;    /* Отступ снизу */
+}

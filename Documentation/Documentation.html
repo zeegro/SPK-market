@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Документация для веб-сайта СПК-Маркет</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div id="documenter_sidebar">
+        <a href="#documenter_cover" id="documenter_logo">
+            <img src="assets/image/logo.png" alt="Logo">
+        </a>
+        <ol id="documenter_nav">
+            <li><a class="current" href="#documenter_cover">Введение</a></li>
+            <li><a href="#folder_structure">Организация файловой структуры</a></li>
+            <li><a href="#html_structure">Структура HTML-документов</a></li>
+            <li><a href="#css_structure">Организация таблиц стилей</a></li>
+            <li><a href="#javascript_implementation">Реализация JavaScript</a></li>
+            <li><a href="#form_feedback">Форма обратной связи</a></li>
+            <li><a href="#main_slider">Настройка слайдера главной страницы</a></li>
+            <li><a href="#typography">Используемые типографические решения</a></li>
+            <li><a href="#administration_panel">Панель администрирования</a></li>
+            <li><a href="#database_structure">Структура базы данных</a></li>
+            <li><a href="#sources_and_credits">Источники и благодарности</a></li>
+        </ol>
+        <div id="documenter_copyright">
+            © 2025 ООО «СПК»
+        </div>
+    </div>
+
+    <div id="documenter_content">
+        <section id="documenter_cover">
+            <h1>Документация для веб-сайта СПК-Маркет</h1>
+            <hr>
+            <ul>
+                <li>Создано: 21.05.2025</li>
+                <li>Автор: zeegro</li>
+                <li>Email: <a href="mailto:-@-">-@-</a></li>
+            </ul>
+            <p>Это документация для сайта моего дипломного проекта. Если у вас есть вопросы, пожалуйста, свяжитесь со мной.</p>
+        </section>
+
+        <section id="folder_structure">
+            <h3>Структура папок</h3>
+            <hr class="notop">
+            <p>Вот как организованы файлы проекта:</p>
+            <ul>
+                <li><strong>assets/</strong> - содержит все медиафайлы:
+                    <ul>
+                        <li><strong>css/</strong> - CSS-файлы для стилей.</li>
+                        <li><strong>images/</strong> - изображения для сайта, включая логотипы и товарные изображения.</li>
+                        <li><strong>js/</strong> - JavaScript-файлы для интерактивности.</li>
+                    </ul>
+                </li>
+                <li><strong>css/</strong> - основные CSS-файлы для дизайна.</li>
+                <li><strong>includes/</strong> - вспомогательные PHP-файлы для подключения частей страниц (например, футера и хедера).</li>
+                <li><strong>templates/</strong> - шаблоны для различных страниц сайта.</li>
+                <li><strong>uploads/</strong> - директория для загрузки пользовательских файлов (например, изображений товаров или сообщений).</li>
+                <li><strong>Documentation/</strong> - папка для данной документации.</li>
+                <li><strong>.php-файлы</strong> - основные страницы сайта (index.php, catalog.php, contacts.php и т.д.).</li>
+            </ul>
+        </section>
+
+        <section id="html_structure">
+            <h3>HTML-структура</h3>
+            <hr class="notop">
+            <p>На сайте используются следующие основные разделы:</p>
+            <ul>
+                <li><strong>Хедер (header.php)</strong> - содержит логотип, меню навигации и другие элементы верхней части страницы.</li>
+                <li><strong>Футер (footer.php)</strong> - содержит контактную информацию, ссылки на социальные сети и другие элементы нижней части страницы.</li>
+                <li><strong>Главная страница (index.php)</strong> - отображает слайдер, категории товаров и популярные продукты.</li>
+                <li><strong>Каталог товаров (catalog.php)</strong> - список всех доступных товаров с возможностью фильтрации по категориям.</li>
+                <li><strong>Контакты (contacts.php)</strong> - форма обратной связи и контактная информация.</li>
+                <li><strong>О компании (about.php)</strong> - информация о вашей компании.</li>
+                <li><strong>Корзина (cart.php)</strong> - управление корзиной пользователя.</li>
+                <li><strong>Админ-панель (admin.php)</strong> - панель администрирования для управления товарами, заказами и сообщениями.</li>
+            </ul>
+            <p>Шаблоны страниц (templates/) используются для повторного использования общих элементов (например, header и footer).</p>
+        </section>
+
+        <section id="css_structure">
+            <h3>CSS-структура</h3>
+            <hr class="notop">
+            <p>Основной CSS-файл: <code>css/style.css</code>.</p>
+            <p>Используются внешние шрифты из Google Fonts:</p>
+            <ul>
+                <li><code>@font-face { font-family: 'Montserrat'; ... }</code></li>
+                <li><code>@font-face { font-family: 'Manrope'; ... }</code></li>
+                <li><code>@font-face { font-family: 'Mark Script'; ... }</code></li>
+            </ul>
+            <p>Шрифты подключаются через <code>https://fonts.googleapis.com/css2?family=Montserrat :wght@400;700&family=Manrope:wght@400;700&family=Mark+Script&display=swap</code>.</p>
+        </section>
+
+        <section id="javascript">
+            <h3>JavaScript</h3>
+            <hr class="notop">
+            <p>На сайте используются следующие JavaScript-файлы:</p>
+            <ul>
+                <li><code>js/script.js</code> - общий скрипт для слайдера, модальных окон и других интерактивных элементов.</li>
+                <li><code>js/form-validation.js</code> - валидация форм обратной связи и оформления заказа.</li>
+            </ul>
+            <p>Пример реализации слайдера:</p>
+            <pre class="brush:js">
+                const slider = document.querySelector('.slider');
+                const slides = document.querySelectorAll('.slide');
+                const dots = document.querySelectorAll('.dot');
+                if (slider && slides.length > 0 && dots.length > 0) {
+                    let currentIndex = 0;
+                    function updateSlider() {
+                        slider.style.transform = `translateX(-${currentIndex * 100}%)`;
+                        dots.forEach(dot => dot.classList.remove('active'));
+                        if (dots[currentIndex]) {
+                            dots[currentIndex].classList.add('active');
+                        }
+                    }
+                    // Остальной код...
+                }
+            </pre>
+        </section>
+
+        <section id="blog_setup">
+            <h3>Форма обратной связи</h3>
+            <hr class="notop">
+            <p>На сайте есть форма обратной связи в разделе "Контакты".</p>
+            <p>Форма обратной связи позволяет пользователям отправлять сообщения с указанием имени, телефона, электронной почты и текста сообщения. Файлы также могут быть прикреплены к сообщению.</p>
+            <p>Сообщения сохраняются в таблице <code>messages</code> в базе данных.</p>
+        </section>
+
+        <section id="slider_setup">
+            <h3>Слайдер главной страницы</h3>
+            <hr class="notop">
+            <p>Слайдер на главной странице реализован вручную с использованием JavaScript. Он переключает изображения из директории <code>assets/images/slider/</code>.</p>
+            <p>Каждое изображение имеет соответствующий класс <code>.slide</code>, а точки навигации имеют класс <code>.dot</code>.</p>
+            <p>Пример HTML-разметки слайдера:</p>
+            <pre class="brush:html">
+                <div class="slider">
+                    <div class="slide"><img src="assets/images/slider/slide1.jpg" alt="Слайд 1"></div>
+                    <div class="slide"><img src="assets/images/slider/slide2.jpg" alt="Слайд 2"></div>
+                    <div class="slide"><img src="assets/images/slider/slide3.jpg" alt="Слайд 3"></div>
+                    <div class="dots">
+                        <span class="dot active" data-index="0"></span>
+                        <span class="dot" data-index="1"></span>
+                        <span class="dot" data-index="2"></span>
+                    </div>
+                </div>
+            </pre>
+        </section>
+
+        <section id="fonts_used">
+            <h3>Используемые шрифты</h3>
+            <hr class="notop">
+            <p>На сайте используются следующие шрифты:</p>
+            <ul>
+                <li><strong>Montserrat</strong> - для заголовков и основного текста.</li>
+                <li><strong>Manrope</strong> - для второстепенного текста.</li>
+                <li><strong>Mark Script</strong> - для декоративных элементов.</li>
+            </ul>
+            <p>Шрифты подключаются через Google Fonts:</p>
+            <pre class="brush:css">
+                @import url('https://fonts.googleapis.com/css2?family=Montserrat :wght@400;700&family=Manrope:wght@400;700&family=Mark+Script&display=swap');
+            </pre>
+        </section>
+
+        <section id="admin_panel">
+            <h3>Админ-панель</h3>
+            <hr class="notop">
+            <p>В шаблоне предусмотрена админ-панель для управления контентом сайта. Ниже приведена информация о её функционале.</p>
+        
+            <h4>1. Вход в админ-панель</h4>
+            <p>Для входа в админ-панель перейдите по адресу: <code>../admin</code>.</p>
+            <p>Логин и пароль по умолчанию:</p>
+            <ul>
+                <li><strong>Логин:</strong> admin</li>
+                <li><strong>Пароль:</strong> 12345</li>
+            </ul>
+            <p>Чтобы сменить логин и пароль, отредактируйте файл <code>login.php</code>. Измените следующие строки:</p>
+            <pre class="brush:php">
+        if ($login === 'admin' && $password === '12345') {
+            // Логика авторизации
+        }
+            </pre>
+            <p>Замените значения <code>'admin'</code> и <code>'12345'</code> на новые данные.</p>
+        
+            <h4>2. Выход из админ-панели</h4>
+            <p>Чтобы выйти из админ-панели, нажмите кнопку <strong>"Выйти из аккаунта"</strong> на странице <code>../admin</code>.</p>
+        
+            <h4>3. Разделы админ-панели</h4>
+            <p>Админ-панель содержит следующие разделы:</p>
+            <ul>
+                <li><strong>Управление товарами</strong></li>
+                <li><strong>Управление категориями</strong></li>
+                <li><strong>Заказы</strong></li>
+                <li><strong>Сообщения с формы</strong></li>
+            </ul>
+        
+            <h5>3.1. Управление товарами</h5>
+            <p>В этом разделе можно добавлять, редактировать и удалять товары:</p>
+            <ul>
+                <li>Чтобы добавить товар, заполните все поля в форме и нажмите кнопку <strong>"Добавить товар"</strong>. Товар появится в списке товаров ниже формы добавления.</li>
+                <li>Чтобы изменить товар, найдите его в списке и нажмите кнопку <strong>"Изменить товар"</strong>. Форма редактирования появится внизу страницы. Внесите изменения в нужные поля и нажмите <strong>"Сохранить изменения"</strong>.</li>
+                <li>Чтобы удалить товар, нажмите кнопку <strong>"Удалить"</strong> рядом с ним.</li>
+            </ul>
+        
+            <h5>3.2. Управление категориями</h5>
+            <p>В этом разделе можно добавлять, редактировать и удалять категории:</p>
+            <ul>
+                <li>Чтобы добавить категорию, введите её название в поле и нажмите <strong>"Добавить"</strong>.</li>
+                <li>Ниже находится список всех категорий. Чтобы отредактировать категорию, нажмите <strong>"Редактировать"</strong>. Форма редактирования появится внизу страницы. Измените название и нажмите <strong>"Сохранить изменения"</strong>.</li>
+                <li>Чтобы удалить категорию, нажмите <strong>"Удалить"</strong> рядом с ней.</li>
+            </ul>
+        
+            <h5>3.3. Заказы</h5>
+            <p>В этом разделе отображаются заказы, оформленные покупателями:</p>
+            <ul>
+                <li>Заказы можно фильтровать по статусу доставки. Для этого справа от каждого заказа нажмите кнопку, соответствующую текущему статусу (например, "В обработке", "Доставлен").</li>
+                <li>Если статус заказа <strong>"Отменён"</strong>, это означает, что пользователь отменил заказ после оформления.</li>
+            </ul>
+        
+            <h5>3.4. Сообщения с формы</h5>
+            <p>В этом разделе находятся сообщения, отправленные пользователями через форму в разделе <strong>Контакты</strong>:</p>
+            <ul>
+                <li>Каждому сообщению можно установить статус <strong>"Прочитано"</strong>, нажав соответствующую кнопку.</li>
+                <li>Чтобы удалить сообщение, нажмите кнопку <strong>"Удалить"</strong>.</li>
+            </ul>
+        </section>
+
+        <section id="database_setup">
+            <h3>База данных</h3>
+            <hr class="notop">
+            <p>Для работы сайта необходима база данных с четырьмя таблицами:</p>
+            <ul>
+                <li><strong>categories</strong> - содержит категории товаров.</li>
+                <li><strong>messages</strong> - содержит сообщения из формы обратной связи.</li>
+                <li><strong>orders</strong> - содержит информацию о заказах.</li>
+                <li><strong>products</strong> - содержит информацию о товарах.</li>
+            </ul>
+            <p>Пример структуры таблиц:</p>
+            <pre class="brush:sql">
+                -- Таблица categories
+                CREATE TABLE categories (
+                    id INT PRIMARY KEY AUTO_INCREMENT,
+                    name VARCHAR(100) NOT NULL UNIQUE,
+                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                );
+        
+                -- Таблица messages
+                CREATE TABLE messages (
+                    id INT PRIMARY KEY AUTO_INCREMENT,
+                    name VARCHAR(100),
+                    phone VARCHAR(20),
+                    email VARCHAR(100),
+                    message TEXT,
+                    file_path VARCHAR(255),
+                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    is_read TINYINT DEFAULT 0
+                );
+        
+                -- Таблица orders
+                CREATE TABLE orders (
+                    id INT PRIMARY KEY AUTO_INCREMENT,
+                    customer_name VARCHAR(100),
+                    phone VARCHAR(20),
+                    email VARCHAR(100),
+                    address TEXT,
+                    product_ids JSON NOT NULL,
+                    total_price DECIMAL(10, 2) NOT NULL,
+                    status ENUM('новый', 'в обработке', 'выполнен', 'отменён') DEFAULT 'новый',
+                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+                );
+        
+                -- Таблица products
+                CREATE TABLE products (
+                    id INT PRIMARY KEY AUTO_INCREMENT,
+                    category_id INT,
+                    name VARCHAR(255) NOT NULL,
+                    description TEXT,
+                    price DECIMAL(10, 2) NOT NULL,
+                    discount DECIMAL(10, 2),
+                    image VARCHAR(255),
+                    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+                    additional_info TEXT,
+                    additional_info2 TEXT
+                );
+            </pre>
+        </section>
+
+        <section id="credits">
+            <h3>Источники и кредиты</h3>
+            <hr class="notop">
+            <p>В разработке сайта были использованы следующие ресурсы:</p>
+            <ul>
+                <li><strong>Google Fonts</strong> - для шрифтов.</li>
+                <li><strong>VS Code</strong> - для написания кода.</li>
+                <li><strong>XAMPP</strong> - для локального тестирования.</li>
+                <li><strong>PHP</strong> - для серверной части.</li>
+                <li><strong>MySQL</strong> - для хранения данных.</li>
+            </ul>
+            <p>Все права на исходный код принадлежат автору проекта.</p>
+        </section>
+    </div>
+    <button id="backToTop">↑</button>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

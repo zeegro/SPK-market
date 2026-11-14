@@ -1,0 +1,92 @@
+.about-main {
+    flex: 1;
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-main h1 {
+    color: #9D0A0F;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.about-main p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+/* Ссылки в тексте */
+.about-main a {
+    font-weight: bold;
+    text-decoration: underline;
+    color: #754E4B;
+}
+
+.brands-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
+    margin-top: 40px;
+}
+
+.brand-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    padding: 20px;
+    width: 100%;
+    min-height: 450px; /* Фиксируем высоту для равномерного расположения */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Распределяет содержимое по вертикали */
+    transition: transform 0.3s ease;
+}
+
+.brand-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Изображение */
+.brand-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+/* Заголовок по центру */
+.brand-card h2 {
+    font-size: 1.2rem;
+    margin: 0;
+    color: #754E4B;
+    text-align: center;
+}
+
+/* Текст по левому краю */
+.brand-card p {
+    margin: 0;
+    line-height: 1.5;
+    color: #333;
+    text-align: left;
+}
+
+/* Ссылка прижата к низу и по центру */
+.brand-card .brand-link {
+    display: block;
+    margin-top: auto; /* Оттолкнёт от верха и прижмёт вниз */
+    color: #754E4B;
+    font-weight: bold;
+    text-decoration: underline;
+    text-align: center;
+    align-self: center;
+}
+
+/* Широкая карточка (4-я) */
+.brand-card-wide {
+    grid-column: span 3;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
